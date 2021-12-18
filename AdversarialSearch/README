@@ -1,0 +1,27 @@
+"python3 Main.py" to run
+
+Without pruning it can take the algo a while to start, code methods adapted from Laura Soto
+github.com/laurasoto98
+
+1. Games:
+   Pool:
+	a) The approach would work
+	b) The state space size would be infinite because the balls can be in any position
+	c) It would take a lot of pruning to make this approach work
+	d) It would work in practice because you can take time between shots
+   Tennis:
+	a) The approach would not work
+	b) The state space size is also infinite because the players and ball can be anywhere on
+	the court
+	c) It would take a algorithm that can calculate faster than a tennis shot to make the approach work
+	d) It would not work in practice because of the timing
+   Soccer:
+	a) The approach would work
+	b) The state space size is infinite because of player and ball positioning
+	c) The apporoach would take fast algorithms or equal strength opponents
+	d) It would work in practice as seen by RoboCanes
+
+2. Minimax and alpha-beta algorithms change for 2 player nonzero-sum games because the best move
+could be making your opponent's position worse than making yours better. It is possible for any
+node to be prund by alpha beta if there are no constraints on the terminals because you can view
+both utility functions.

@@ -1,0 +1,6 @@
+I couldn't quite get the framework to work so here is how I tested the problem.
+
+I run "python3 Main.py" until I get a fitness value <= 2
+
+Then either a mutation solves the problem or the fitness is exceeded.
+The run is successful only about half the time so you might have to run it a couple times.

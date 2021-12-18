@@ -1,0 +1,35 @@
+To run algorithms:
+"python3 [filename]"
+
+Problems: Forechecking and 3checking can break because we do multiple runs
+
+2.
+
+Times:
+No initial assigment
+Initial assignment
+
+Backtracking:
+0.0143
+0.0147
+
+Foreward Checking:
+0.0113
+0.0123
+
+AC-3:
+0.0133
+0.0153
+
+Min Conflicts:
+0.0153
+0.0108
+
+Assigning an initial variable did not seem to help but maybe that is because I choose 'Red' each time. The times are
+so small it doesn't seem to matter which algorithm you use except for tha face that Foreward Checking and AC-3 can
+break
+
+3. From the 2 exercises I learned what scenarios some of these algorithms would be good for. I prefer CSP because it
+is complete for me in most cases where my genetic algorithm failed more.
+
+

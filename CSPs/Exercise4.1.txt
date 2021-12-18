@@ -1,0 +1,29 @@
+1. Define
+
+   Constraint satisfaction problem - A problem defined by variables that each have their own
+   constraints to satisfied
+
+   Constraint - Critera that a variable must meet in order to be considered solved
+
+   Back-tracking search - A varient of depth first search that uses less memory
+
+   Back-jumping - A method that backtracks to the most recent assignment in the conflict set
+
+   Min-conflicts - A heursitic that chooses the minimum number of conflicts with other variables
+
+2. How many solutions to the Australia Problem
+
+   There are 3! or 6 solutions to the three color mapping problem for australia
+
+
+4.2
+
+1. Define the problem:
+
+   States - Good state: bordering no states of the same color
+   	    Bad state: boardering a state with the same color
+
+   Goal-test - check each state's borders for matching colors, if none match goal is reached
+
+   Sucessor function - Given the states and borders return the number of conflicts or states
+   bording each other sharing the same color

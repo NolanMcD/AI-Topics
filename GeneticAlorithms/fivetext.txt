@@ -1,0 +1,8 @@
+Nolan McDermott
+
+Variables = {GA, AL, MS, TN, KY, VR, WV, NC, SC}
+
+Domain = {Red, White, Blue, Yellow}
+
+Constraints = {For every state, it's color mist be different from any state it borders}
+
