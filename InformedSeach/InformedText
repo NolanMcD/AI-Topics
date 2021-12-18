@@ -1,3 +1,7 @@
+"python3 main.py" to run
+
+output path in output/astar.js
+
 The heuristic path algorithm: f(n) = (2 - w)g(n) + wh(n)
 
 The algorithm is guaranteed to be optimal for any value of w between 0 and 1 (0 <= w <= 1)
