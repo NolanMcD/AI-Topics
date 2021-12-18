@@ -1,0 +1,47 @@
+Nolan McDermott
+
+1.
+	a)	T --> Fg    Fa
+		 \    |	    |
+		   \> G --> A
+
+		   (Sorry of this is illegable)
+
+	b) Yes it is a polytree
+
+	c)     	  Fg = T		Fg = F
+	----------------------------------------------------
+		  T = High  T = Normal	T = High  T = Normal
+	----------------------------------------------------
+	G = High  y	    (1 - y)	x	  (1 - x)
+	G = Norm  (1 - y)   y  	 	(1 - x)	  x
+
+	d)  	  G = Norm  		G = High
+	----------------------------------------------------
+		  Fa = T  Fa = F	Fa = T	  Fa = F
+	----------------------------------------------------
+	A = T     T	  T		T	  F
+	A = F	  F	  F		F	  T
+
+
+2.
+	a)
+		P(B|j,m) = alpha P(B) SUM P(e) SUM P(a|B,e)P(j|a)P(m|a)
+		P(B|j,m) = alpha f1(B) * f7(B) 
+		
+
+	b)
+		Using enumeration - 16 operations
+		Using var elimination - 8 operations
+
+	c)
+		Using enumeraton - The complexity is exponetial or NP
+		Using var elimination - The complexity is linear or P
+
+	d)
+		The complexity of running variable elimination on a polytree network is linear
+		for any tree with consistent network structure. This is true because if the tree
+		has consistent structre for every root you can cancel at least 1 leaf. This means
+		that you can follow the network in linear time and even when depth increases.
+		
+	

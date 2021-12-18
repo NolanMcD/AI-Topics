@@ -1,0 +1,57 @@
+Nolan McDermott
+
+1.
+	P(A) = 0.4
+	P(B) = 0.3
+	P(A v B) = 0.5
+	P(A ^ B) = 0.2
+
+	Axiom 3:
+	P(A v B) = P(A) + P(B) - P(A ^ B)
+	
+	It would be rational for an agent to hold these beliefs. The range of probabities for
+	(A ^ B) would be 0-0.7
+
+	Agent 1			Agent 2			Outcomes and payoffs to Agent 1
+	Prop  	Belief		Bet   	Stakes		a,b	 a,~b	     ~a,b     ~a,~b
+	a	0.4		a	4 to 6		-6	 -6	     4	      4
+	b	0.3		b	3 to 7		-7	 3	     -7	      3
+	avb	0.5		~(avb)	5 to 5		5	 5	     5	      -5
+					     		-8	 2	     2	      2
+
+	Agent 1			Agent 2			Outcomes and payoffs to Agent 1
+	Prop	Belief		Bet   	Stakes		a,b	 a,~b	     ~a,b     ~a,~b
+	a	0.4		a	4 to 6		-6	 -6	     4	      4
+	b	0.3		b	3 to 7		-7	 3	     -7	      3
+	avb	0.7		~(avb)	3 to 7		3	 3	     3	      -7
+					     		-10	 0	     0	      0
+
+	The table is still rational because it follows the axioms of probability
+
+
+2.
+	p(toothache = 1) = 0.108 + 0.012 + 0.016 + 0.064 = .200
+	P(Cavity) = (.108 + .012 + 0.072 + .008, 0.016 + 0.064 + 0.144 + 0.576) = (.200, .800)
+	P(Toothache | cavity) = P(cavity | Toothache) * P(Toothache) / P(cavity)
+		      	      = (.108 + .012) / (.200)
+			      = .600
+	P(Cavity | toothache v catch) = P(toothache v catch | Cavity)* P(Cavity)/P(toothachevcatch)
+		   	       	      = (.108 + .012 + .072) / (.416)
+				      = .460
+
+3.
+	Its good news that is disease is rare because that means the probability of a false
+	positive test could be higher than the probability of having the disease.
+
+	P(Disease | Positive Test) = P(Positive Test | Disease) * P(Disease) / P(Positive Test)
+		    	     	   = .99 * .0001 / .010098
+				   = 0.0098
+
+	P(Positive Test) = P(true positive) + P(false positive)
+ 		   	 = (.99 * .0001) + (.01 + .9999)
+			 = 0.010098
+
+4.
+	python3 slots.py
+	
+			 

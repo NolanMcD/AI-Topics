@@ -1,0 +1,41 @@
+Nolan McDermott
+
+1.
+	a) It is possible to distinguish the most likely color of the taxi by combining 2
+	probabilities
+
+	b) p(taxi = blue | apperance = blue) = (.75) * (.10) / (.25) * (.90) + (.75) * (.10)
+	   	    	   	       	     = .25
+
+2.
+	a) Using the prior probability of P(Category) you can use the conditional probs
+	of P(Word(i) | Category) to find if the the document has the ith word in the dictionary.
+	Then for each catergory you can find the conditional prob P(Word(i) = True | Category = c)
+	which is the portion of documents c that have word i.
+
+	b) A new document can be categorized by using conditional independence and normalization.
+	P(Category | words) = alpha P(Category) SUM P(words | Category)
+
+	c) In this case the independent assumption is unreasonable because lots of words appear in
+	conjunction. A good example would be "ice" and "cream."
+
+3.
+	a)
+				IcyWeather
+		Battery				StarterMotor
+	Radio		Ignition				Gas
+						Starts
+						Moves
+
+	b)
+	prior for IcyWeather in Miami is really low so lets say .01
+	P(Battery|IcyWeather) = .90, P(Battery|~IcyWeather) = .99
+	P(StarterMotor|Icy) = .94, P(Battery|~IcyWeather) = .98
+
+	c) 255 independent values (2^8 - 1)
+
+	d) 20 independent probability values (1+2+2+2+2+8+2+1)
+
+	e) This family in general can be defined as all the conditions that lead to the engine
+	starting. If you use the principal of de Morgans laws this can also be seen as not all the
+	conditions that lead the engine not starting.
