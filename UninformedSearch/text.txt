@@ -1,0 +1,73 @@
+Nolan McDermott
+
+1. Explain why problem formulation must follow goal:
+
+   Problem formulation must follow goal forumulation because without a goal you can't examine
+   what actions and states should be considered to reach the goal.
+
+2. Negative path costs
+
+   a) Arbitrarily large negative path costs would cause optimal algorithms to explore the entire
+   state space because the optimal algorithm examines all solutions so it would have to explore
+   every potential solution.
+
+   b) Step costs are already assumed to be nonnegative so this is not very helpful for trees and
+   graphs.
+
+   c) If all the operators have negative costs the optimal behavior for an agent in this
+   environment would be to stop.
+
+   d) Humans do not drive around scenic loops because the beauitful scenery does not outweigh the
+   final goal. A good way to define state spaces and operators so agents don't loop is to make sure
+   they don't return to the same state twice.
+
+   e) A domain in which step costs are such to cause looping is Automatic assembly sequencing
+   
+3. Missionaries and Cannibals
+
+`  a) State space solution diagram
+   M - Missionary, C - Cannibal
+   Left side of river:		Boat:		Right side of river:
+   MMMCCC    			--		------
+   MMMC--			CC  ->		------
+   MMMC--			<- C-		C-----
+   MMM---			CC  ->		C-----
+   MMM---			<- C-		CC----
+   MC----			MM  ->		CC----
+   MC----			<- CM		MC----
+   CC----			MM ->		MC----
+   C-----			<- C-		MMMC--
+   ------			CC ->		MMMCCC
+
+   b) State space optimal search
+   Node [x,y,z]: x = missionaries, y = cannibals, z = 1 means boat on left shore
+
+   Start node:         [3,3,1]
+                          |
+   [3,2,0] , [3,1,0] , [2,3,0] , [2,2,0] , [1,3,0]
+                |                   |
+	     [3,2,1]             [2,3,1]
+	        |
+   [3,0,0] , [2,1,0] , [1,2,0]
+      |
+   [3,1,1]
+      |
+   [2,0,0] , [1,1,0]
+                |
+   [1,2,1] , [1,3,1] , [2,1,1] , [2,2,1]
+   	     	                    |
+				 [0,2,0]
+				    |
+				 [0,3,1]
+				    |
+				 [0,1,0]
+				    |
+				 [0,2,1]
+				    |
+				 [0,0,0] <-- goal!
+   It is good to check for repeated states because it could be one that is already killed or forms
+   a loop
+
+   c) This problem is so hard for humans even with a simple state space because it is unintuitive
+   to send people backwards in the boat to align with the problem's distinctions.
+
