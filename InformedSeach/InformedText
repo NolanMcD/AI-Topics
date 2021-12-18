@@ -1,0 +1,27 @@
+The heuristic path algorithm: f(n) = (2 - w)g(n) + wh(n)
+
+The algorithm is guaranteed to be optimal for any value of w between 0 and 1 (0 <= w <= 1)
+
+w	f(n)			Type of Algorithm
+-------------------------------------------------
+0	f(n) = 2g(n)		Uniformed best-first search
+1	f(n) = g(n)+h(n)	A* search
+2	f(n) = 2h(n)		Greedy best-first search
+
+1. There are x*y possible states, but infinte possible states because of loops
+
+2.
+	The shortest path must consist of straight line segments because the shortest distance
+	between 2 points is astraight line so to get around the polygons you must visit the
+	verticies. A good state space would then be all the verticies between the start and goal.
+	This state space is the size of the number of veritices in the space.
+
+3. Functions:
+	Successor - takes a vertex as input and returns the set of veritices that can be reache
+	with the stright line.
+
+	Heuristic - returns the stright line distance form a given vertex to the goal
+
+	A* - Gives an underestimated score of f(n) = g(n) + h(n)
+
+	Intersection - returns weather or no 2 lines intersect as to not have collision
